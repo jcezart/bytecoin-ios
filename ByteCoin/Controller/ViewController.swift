@@ -41,12 +41,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedCurrency = coinManager.currencyArray[row]
         coinManager.getCoinPrice(for: selectedCurrency)
+        self.currencyLabel.text = coinManager.currencyArray[row]
         
     }
     
     func didUpdateCoin(_ coinManager: CoinManager, coin: CoinModel) {
         DispatchQueue.main.async {
             print(coin.price)
+            self.bitcoinLabel.text = coin.price
+            
         }
     }
     

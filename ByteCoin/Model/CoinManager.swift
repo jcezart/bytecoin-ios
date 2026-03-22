@@ -17,7 +17,7 @@ struct CoinManager {
     
     let baseURL = "https://api.twelvedata.com/price?symbol=BTC"
     //let apiKey = ""
-    let apiKey = "yourkeyhere"
+    let apiKey = "yourApiKeyHere"
     var delegate: CoinManagerDelegate?
     
     let currencyArray = ["AUD", "BRL","CAD","EUR","GBP","ILS","INR","JPY","MXN","NZD","PLN","SEK","USD","ZAR"]
